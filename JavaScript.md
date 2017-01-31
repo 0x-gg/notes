@@ -118,3 +118,21 @@ switch (num) {
 }
 ```
 
+Chained if/else's can be converted to switch/case:
+
+```{JavaScript}
+switch (x) {
+ case 1:
+ case 2:
+ case 3:
+   do something;
+   break;
+ case 4:
+ ...
+}
+```
+
+If an object property has a space, you *will* have to use bracket notation to access:
+
+`myObj["my property"]`
+

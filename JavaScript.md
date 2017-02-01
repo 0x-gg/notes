@@ -132,7 +132,36 @@ switch (x) {
 }
 ```
 
-If an object property has a space, you *will* have to use bracket notation to access:
+Objects and properties -
 
-`myObj["my property"]`
+```{JavaScript}
+# property has a space
+var x = myObj["my property"];
+
+# delete a property
+delete myObj.objProperty;
+
+# does it have a property?
+myObj.hasOwnProperty(checkProp);
+```
+
+`Math.random()` generated between 0 (inclusive) and 1 (exclusive)
+
+Regex:
+```{JavaScript}
+\s+ // one or more whitespace
+\S // anything that isn't whitespace. No need of + here
+```
+
+Constructor functions:
+```{JavaScript}
+var Car = function() {
+  this.wheels = 4; // this refers to the new object being created
+  this.engines = 1;
+  this.seats = 5;
+};
+
+var myCar = new Car();
+// important to use new, so JavaScript all reference to this are made to new object
+```
 

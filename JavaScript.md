@@ -165,3 +165,16 @@ var myCar = new Car();
 // important to use new, so JavaScript all reference to this are made to new object
 ```
 
+Map does nothing to the original array. You need to store it somewhere.
+
+Reduce -
+```{JavaScript}
+myArr.reduce(function(previousVal, currentVal) {
+...
+// previousVal starts with the first element of array (default, unless optional 2nd argument is passed, in which case it becomes that value)
+// first argument is callback whose arguments are the accumulator
+// previousVal - first value of array
+// currentVal - next value of array
+// and so on
+});
+```

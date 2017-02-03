@@ -178,3 +178,5 @@ myArr.reduce(function(previousVal, currentVal) {
 // and so on
 });
 ```
+
+Filter - Any array element for which the callback returns true will be kept and elements that return false will be filtered out.

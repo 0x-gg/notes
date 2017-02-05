@@ -1,8 +1,8 @@
 JavaScript immutability -
 Strings are not mutable but arrays are
 
-```{JavaScript}
-var myStr = "Jello World";
+```JavaScript
+var myStr = "Hello World";
 myStr[0] = "H"; // Fix Me
 
 TypeError: 0 is read-only
@@ -12,17 +12,17 @@ TypeError: 0 is read-only
 
 Nth Letter of string
 
-```{JavaScript}
+```JavaScript
 myStr[N-1]
 ```
 
 Last Letter
-```{JavaScript}
+```JavaScript
 myStr[myStr.length - 1]
 ```
 
 Nth-to-last letter
-```{JavaScript}
+```JavaScript
 myStr[myStr.length - N]
 ```
 
@@ -36,7 +36,7 @@ Variables created without `var` are automatically defined in the global scope. Y
 
 Double equal, `==`, behavior:
 
-```{JavaScript}
+```JavaScript
 1 == 1 // true
 1 == 2 // false
 1 == '1' // true
@@ -47,7 +47,7 @@ Double equal, `==`, behavior:
 
 Triple equal, `===`, behavior:
 
-```{JavaScript}
+```JavaScript
 3 === 3 // true
 3 === '3' // false
 
@@ -56,7 +56,7 @@ Triple equal, `===`, behavior:
 
 Inequality operator, `!=`, behavior
 
-```{JavaScript}
+```JavaScript
 1 != 2 // true
 1 != "1" // false
 1 != '1' // false
@@ -68,7 +68,7 @@ Inequality operator, `!=`, behavior
 
 Strict inequality operator, `!==`, behavior
 
-```{JavaScript}
+```JavaScript
 3 !== 3 // false
 3 !== '3' // true
 4 !== 3 // true
@@ -78,7 +78,7 @@ Strict inequality operator, `!==`, behavior
 
 Greater that, `>`, operator behavior:
 
-```{JavaScript}
+```JavaScript
  5 > 3 // true
 7 > '3' // true
 2 > 3 // false
@@ -89,7 +89,7 @@ Greater that, `>`, operator behavior:
 
 Greater that or equal to, `>=`, behavior:
 
-```{JavaScript}
+```JavaScript
 6 >= 6 // true
 7 >= '3' // true
 2 >= 3 // false
@@ -104,7 +104,7 @@ Logical order in chained if-else statements is important
 
 `switch` - don't forget to add `break;` in each `case`. `default` does not require `break;`:
 
-```{JavaScript}
+```JavaScript
 switch (num) {
   case value1:
     statement1;
@@ -112,7 +112,7 @@ switch (num) {
   case value2:
     statement2;
     break;
-  ...
+  //...
   default:
     defaultStatement;
 }
@@ -120,7 +120,7 @@ switch (num) {
 
 Chained if/else's can be converted to switch/case:
 
-```{JavaScript}
+```JavaScript
 switch (x) {
  case 1:
  case 2:
@@ -128,13 +128,13 @@ switch (x) {
    do something;
    break;
  case 4:
- ...
+ //...
 }
 ```
 
 Objects and properties -
 
-```{JavaScript}
+```JavaScript
 # property has a space
 var x = myObj["my property"];
 
@@ -148,13 +148,13 @@ myObj.hasOwnProperty(checkProp);
 `Math.random()` generated between 0 (inclusive) and 1 (exclusive)
 
 Regex:
-```{JavaScript}
+```JavaScript
 \s+ // one or more whitespace
 \S // anything that isn't whitespace. No need of + here
 ```
 
 Constructor functions:
-```{JavaScript}
+```JavaScript
 var Car = function() {
   this.wheels = 4; // this refers to the new object being created
   this.engines = 1;
@@ -165,10 +165,11 @@ var myCar = new Car();
 // important to use new, so JavaScript all reference to this are made to new object
 ```
 
-Map does nothing to the original array. You need to store it somewhere.
+`map` does nothing to the original array. You need to store it somewhere.
 
-Reduce -
-```{JavaScript}
+`reduce` -
+
+```JavaScript
 myArr.reduce(function(previousVal, currentVal) {
 ...
 // previousVal starts with the first element of array (default, unless optional 2nd argument is passed, in which case it becomes that value)
@@ -179,4 +180,18 @@ myArr.reduce(function(previousVal, currentVal) {
 });
 ```
 
-Filter - Any array element for which the callback returns true will be kept and elements that return false will be filtered out.
+`filter` - Any array element for which the callback returns true will be kept and elements that return false will be filtered out.
+
+Unlike `map`, `reduce` or `filter` - `sort` will alter the array in place.
+
+`sort` - The compare function should return a negative number if a should be before b, a positive number if a should be after b, or 0 if they are equal.
+
+```JavaScript
+myArr.sort((a,b) => {
+  // ...
+  //return a - b
+  // smallest to largest
+  // return b - a
+  // largest to smallest
+});
+```

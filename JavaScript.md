@@ -195,3 +195,30 @@ myArr.sort((a,b) => {
   // largest to smallest
 });
 ```
+
+Max of an array
+```JavaScript
+Math.max.apply(null, myArr);
+```
+
+Slice with negtive number - end of string
+
+```JavaScript
+myArr.slice(-4); // last 4 characters of string
+```
+
+Working with function arguments
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+
+```JavaScript
+var args = Array.from(arguments);
+var args = [...arguments]; // ES6
+```
+
+Whenever you create a JavaScript object you are already using JSON.
+
+Use anonymous functions with setTimeout otherwise they trigger immediately.
+
+```JavaScript
+setTimeout(function() { tasks.removeChild(removeThisTask) }, 1000);
+```

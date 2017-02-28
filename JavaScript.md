@@ -222,3 +222,11 @@ Use anonymous functions with setTimeout otherwise they trigger immediately.
 ```JavaScript
 setTimeout(function() { tasks.removeChild(removeThisTask) }, 1000);
 ```
+
+Get geolocation:
+```JavaScript
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(function(position) {
+$("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
+});
+```

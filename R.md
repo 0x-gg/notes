@@ -1,8 +1,52 @@
-Set the working dir
+### Index
+
+##### Plotting - INFX 573: Lecture 3
+
+
+See the class of the data
+```r
+class()
+```
+
+Generating sequences
+```r
+1:10
+seq(1, 10, length.out = 10) # generate sequence between these numbers
+seq(1,10, length.out = 20) # fractional output
+seq(1,10, by = 0.5) # step output
+```
+
+
+Working directory related
 
 ```r
 setwd("/..")
+getwd()
 ```
+
+Descriptive functions
+```r
+dim() # dimensions of data object
+nrow() # number of rows
+ncol() # number of columns
+length() # length of vector/list
+head()
+tail()
+colnames()
+rownames()
+```
+
+Applying functions over rows or columns
+```r
+apply(somedataframe, 1, sum) # sum over rows
+apply(somedataframe, 2, sum) # sum over columns
+```
+
+Working with groups of data with by()
+```r
+by(groupedvalue, groupbythisvalue, groupingfunction)
+```
+
 
 Plotting linear regression line
 
